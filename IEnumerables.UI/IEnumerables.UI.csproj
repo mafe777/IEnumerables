@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\IEnumerables.logic\IEnumerables.logic.csproj" />
+  </ItemGroup>
+
 </Project>

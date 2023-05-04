@@ -1,4 +1,6 @@
-﻿int option;
+﻿using IEnumerables.logic;
+
+int option;
 do
 {
     option = Menu();
@@ -15,7 +17,13 @@ do
 
 void theAnagrams()
 {
-    throw new NotImplementedException();
+    Console.Write("Enter the first word: ");
+    string word1 = Console.ReadLine()!.ToLower();
+    Console.Write("Enter the second word: ");
+    string word2 = Console.ReadLine()!.ToLower();
+    var areanagrams = new Anagrams (word1, word2);
+    areanagrams.IsAnagram();
+    Console.WriteLine(areanagrams);
 }
 
 void theLinkedList()
@@ -35,5 +43,13 @@ void theList()
 
 int Menu()
 {
-    throw new NotImplementedException();
+    Console.WriteLine(" *-- IENUMERABLES--*   ");
+    Console.WriteLine("      1. list");
+    Console.WriteLine("      2. Dictionary");
+    Console.WriteLine("      3. Linked List");
+    Console.WriteLine("      4. Anagrams");
+    Console.WriteLine("      0. Exit");
+    Console.Write("     Choose the option:  ");
+    var option = Console.ReadLine();
+    return Convert.ToInt32(option);
 }
